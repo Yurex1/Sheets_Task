@@ -5,9 +5,9 @@ import * as path from 'path';
 @Injectable()
 export class GoogleSheetsService {
   private readonly spreadsheetId =
-    '1WACs-GH1XMvpK1cmWgihgjtwUBZKrPGtPjOxVkX0r9s'; // Replace with your spreadsheet ID
+    '1WACs-GH1XMvpK1cmWgihgjtwUBZKrPGtPjOxVkX0r9s';
 
-  async fetchSheetData(range: string): Promise<any[]> {
+  async fetchSheetData(range: string) {
     const auth = new google.auth.GoogleAuth({
       keyFile: path.join(
         '/Users/yurex/Desktop/tavlia/SheetsTask/sheets-backend/sturdy-airport-386414-4d3be062e963.json',
@@ -28,5 +28,9 @@ export class GoogleSheetsService {
       console.error('Error fetching Google Sheet data:', error.message);
       throw error;
     }
+  }
+  async getRowWithId(id: number) {
+    const result = await this.fetchSheetData('A1:Z500');
+    return result[--id];
   }
 }
