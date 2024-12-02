@@ -11,7 +11,7 @@ export class GoogleSheetsService {
     const auth = new google.auth.GoogleAuth({
       keyFile: path.resolve(
         __dirname,
-        '../../sturdy-airport-386414-4d3be062e963.json',
+        '../../etc/secrets/sturdy-airport-386414-4d3be062e963.json',
       ),
       scopes: ['https://www.googleapis.com/auth/spreadsheets'],
     });
