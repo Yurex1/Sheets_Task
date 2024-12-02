@@ -7,11 +7,13 @@ export class GoogleSheetsController {
 
   @Get(':id')
   getRowWithId(@Param('id') id: number) {
-    return this.google_sheets_service.getRowWithId(id);
+    return id;
+    // return this.google_sheets_service.getRowWithId(id);
   }
 
   @Get()
   getAllData() {
-    return this.google_sheets_service.fetchSheetData('A1:E10');
+    return 's';
+    // return this.google_sheets_service.fetchSheetData('A1:E10');
   }
 }
