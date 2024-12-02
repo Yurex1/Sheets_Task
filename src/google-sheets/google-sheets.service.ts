@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { google } from 'googleapis';
-import * as path from 'path';
+// import { google } from 'googleapis';
+// import * as path from 'path';
 
 @Injectable()
 export class GoogleSheetsService {
@@ -8,13 +8,13 @@ export class GoogleSheetsService {
     '1WACs-GH1XMvpK1cmWgihgjtwUBZKrPGtPjOxVkX0r9s';
 
   async fetchSheetData(range: string) {
-    const auth = new google.auth.GoogleAuth({
-      keyFile: path.resolve(
-        __dirname,
-        '/etc/secrets/sturdy-airport-386414-4d3be062e963.json',
-      ),
-      scopes: ['https://www.googleapis.com/auth/spreadsheets'],
-    });
+    // const auth = new google.auth.GoogleAuth({
+    //   keyFile: path.resolve(
+    //     __dirname,
+    //     '/etc/secrets/sturdy-airport-386414-4d3be062e963.json',
+    //   ),
+    //   scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+    // });
 
     return 'ASD';
     // const sheets = google.sheets({ version: 'v4', auth });
