@@ -28,7 +28,8 @@ export class GoogleSheetsService {
     }
   }
   async getRowWithId(id: number) {
-    const result = await this.fetchSheetData('A1:Z500');
-    return result[--id];
+    const range = `A${id}:Z${id}`;
+    const result = await this.fetchSheetData(range);
+    return result[0] || null;
   }
 }
