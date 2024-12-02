@@ -13,7 +13,7 @@ export class GoogleSheetsController {
 
   @Get()
   getAllData() {
-    return 's';
+    // return 's';
     // return this.google_sheets_service.fetchSheetData('A1:E10');
   }
 }
