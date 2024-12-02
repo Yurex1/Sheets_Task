@@ -9,9 +9,7 @@ export class GoogleSheetsService {
 
   async fetchSheetData(range: string) {
     const auth = new google.auth.GoogleAuth({
-      keyFile: path.join(
-        '/Users/yurex/Desktop/tavlia/SheetsTask/sheets-backend/sturdy-airport-386414-4d3be062e963.json',
-      ),
+      keyFile: path.join('../../sturdy-airport-386414-4d3be062e963.json'),
       scopes: ['https://www.googleapis.com/auth/spreadsheets'],
     });
 
