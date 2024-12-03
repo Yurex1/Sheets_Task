@@ -9,11 +9,11 @@ export class GoogleSheetsService {
 
   async fetchSheetData(range: string) {
     console.log('ABRACADABRA');
+    return 'ASD';
     const auth = new google.auth.GoogleAuth({
       credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT),
       scopes: ['https://www.googleapis.com/auth/spreadsheets'],
     });
-    return 'ASD';
     const sheets = google.sheets({ version: 'v4', auth });
     try {
       const response = await sheets.spreadsheets.values.get({
