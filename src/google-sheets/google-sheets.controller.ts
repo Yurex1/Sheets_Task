@@ -11,7 +11,7 @@ export class GoogleSheetsController {
   // }
 
   @Get()
-  getAllData() {
+  async getAllData() {
     return 'A';
     // return this.google_sheets_service.fetchSheetData('A1:E10');
   }
