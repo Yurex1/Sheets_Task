@@ -10,7 +10,7 @@ export class GoogleSheetsService {
   async fetchSheetData(range: string) {
     console.log('ABRACADABRA');
     const auth = new google.auth.GoogleAuth({
-      keyFile: '/etc/secrets/sturdy-airport-386414-4d3be062e963.json',
+      credentials: JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT),
       scopes: ['https://www.googleapis.com/auth/spreadsheets'],
     });
 
